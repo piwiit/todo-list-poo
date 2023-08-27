@@ -14,4 +14,12 @@ module.exports = {
       template: 'src/index.html',
     }),
   ],
+
+  mode: 'none',
+
+  devServer: {
+    open: true,
+    static: path.resolve(__dirname, './dist'),
+    port: 4000,
+  },
 };
