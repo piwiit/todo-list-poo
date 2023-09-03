@@ -1,4 +1,4 @@
-export class TaskList {
+export default class TaskList {
   constructor() {
     this.tasks = [];
   }
@@ -12,5 +12,9 @@ export class TaskList {
     if (index !== -1) {
       this.tasks.splice(index, 1);
     }
+  }
+
+  getAllTasks() {
+    return this.tasks;
   }
 }
