@@ -17,6 +17,15 @@ module.exports = {
 
   mode: 'none',
 
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+
   devServer: {
     open: false,
     static: path.resolve(__dirname, './dist'),

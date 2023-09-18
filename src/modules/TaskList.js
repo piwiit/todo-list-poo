@@ -1,5 +1,3 @@
-import Task from './Task';
-
 export default class TaskList {
   constructor() {
     this.tasks = [];

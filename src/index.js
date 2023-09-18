@@ -1,4 +1,5 @@
 import Task from './modules/Task.js';
+import './style.css';
 
 const task1 = new Task('Bonjour, moi');
 
