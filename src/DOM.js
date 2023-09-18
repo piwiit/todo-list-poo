@@ -1,5 +1,6 @@
 // DOM.js
-import TaskList from './modules/TaskList.js';
+import TaskList from './modules/TaskList';
+import Task from './modules/Task';
 
 const taskList = new TaskList();
 
@@ -8,12 +9,11 @@ function renderTasks() {
   app.innerHTML = ''; // Efface le contenu précédent
 
   const tasks = taskList.getAllTasks();
-
-  tasks.forEach((task, index) => {
+  tasks.forEach((task) => {
     const taskElement = document.createElement('div');
+    console.log(task);
     taskElement.innerHTML = `
             <h3>${task.title}</h3>
-            <p>${task.dueDate}</p>
         `;
 
     const deleteButton = document.createElement('button');
@@ -52,5 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.appendChild(addTaskForm);
   renderTasks();
-  console.log('hello from DOM');
 });

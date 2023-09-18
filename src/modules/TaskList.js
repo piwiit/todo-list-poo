@@ -1,10 +1,12 @@
+import Task from './Task';
+
 export default class TaskList {
   constructor() {
     this.tasks = [];
   }
 
   addTask(task) {
-    this.tasks.push(this.task);
+    this.tasks.push(task);
   }
 
   removeTask(task) {
